@@ -33,9 +33,9 @@
             this.cmbBusqueda = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl2 = new System.Windows.Forms.Panel();
-            this.cmbTipos = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.cmbTipos = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerCuotas)).BeginInit();
             this.pnl2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -88,15 +88,6 @@
             this.pnl2.TabIndex = 4;
             this.pnl2.Visible = false;
             // 
-            // cmbTipos
-            // 
-            this.cmbTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipos.FormattingEnabled = true;
-            this.cmbTipos.Location = new System.Drawing.Point(0, 0);
-            this.cmbTipos.Name = "cmbTipos";
-            this.cmbTipos.Size = new System.Drawing.Size(156, 21);
-            this.cmbTipos.TabIndex = 0;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cmbEstado);
@@ -115,6 +106,15 @@
             this.cmbEstado.Size = new System.Drawing.Size(155, 21);
             this.cmbEstado.TabIndex = 0;
             // 
+            // cmbTipos
+            // 
+            this.cmbTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipos.FormattingEnabled = true;
+            this.cmbTipos.Location = new System.Drawing.Point(0, 0);
+            this.cmbTipos.Name = "cmbTipos";
+            this.cmbTipos.Size = new System.Drawing.Size(156, 21);
+            this.cmbTipos.TabIndex = 0;
+            // 
             // FrmCalendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +127,7 @@
             this.Controls.Add(this.dgvVerCuotas);
             this.Name = "FrmCalendario";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmCalendario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerCuotas)).EndInit();
             this.pnl2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

@@ -1,4 +1,5 @@
 ﻿using AppCore.Interfaces;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,14 @@ namespace CalendarioPago
         private void BtnCrear_Click(object sender, EventArgs e)
         {
             FrmAgregarCuota frmAgregarCuota = new FrmAgregarCuota();
+        }
+
+        private void FrmCalendario_Load(object sender, EventArgs e)
+        {
+            dgvVerCuotas.DataSource = null;
+            dgvVerCuotas.DataSource = calendarioService.GetAll();
+
+            cmbBusqueda.Items.AddRange(Enum.GetValues(typeof(Finder)).Cast<object>().ToArray());
         }
     }
 }
