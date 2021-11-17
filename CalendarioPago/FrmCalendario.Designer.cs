@@ -32,13 +32,9 @@
             this.btnCrear = new System.Windows.Forms.Button();
             this.cmbBusqueda = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnl2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbTipos = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerCuotas)).BeginInit();
-            this.pnl2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvVerCuotas
@@ -68,6 +64,7 @@
             this.cmbBusqueda.Name = "cmbBusqueda";
             this.cmbBusqueda.Size = new System.Drawing.Size(103, 21);
             this.cmbBusqueda.TabIndex = 2;
+            this.cmbBusqueda.SelectedIndexChanged += new System.EventHandler(this.CmbBusqueda_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -78,49 +75,34 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Busqueda:";
             // 
-            // pnl2
-            // 
-            this.pnl2.Controls.Add(this.panel1);
-            this.pnl2.Controls.Add(this.cmbTipos);
-            this.pnl2.Location = new System.Drawing.Point(242, 12);
-            this.pnl2.Name = "pnl2";
-            this.pnl2.Size = new System.Drawing.Size(156, 21);
-            this.pnl2.TabIndex = 4;
-            this.pnl2.Visible = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cmbEstado);
-            this.panel1.Location = new System.Drawing.Point(3, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 20);
-            this.panel1.TabIndex = 5;
-            this.panel1.Visible = false;
-            // 
             // cmbEstado
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(-3, -1);
+            this.cmbEstado.Location = new System.Drawing.Point(245, 12);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(155, 21);
             this.cmbEstado.TabIndex = 0;
+            this.cmbEstado.Visible = false;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.CmbEstado_SelectedIndexChanged);
             // 
             // cmbTipos
             // 
             this.cmbTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipos.FormattingEnabled = true;
-            this.cmbTipos.Location = new System.Drawing.Point(0, 0);
+            this.cmbTipos.Location = new System.Drawing.Point(244, 12);
             this.cmbTipos.Name = "cmbTipos";
             this.cmbTipos.Size = new System.Drawing.Size(156, 21);
             this.cmbTipos.TabIndex = 0;
+            this.cmbTipos.Visible = false;
             // 
             // FrmCalendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnl2);
+            this.Controls.Add(this.cmbTipos);
+            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbBusqueda);
             this.Controls.Add(this.btnCrear);
@@ -129,8 +111,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmCalendario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerCuotas)).EndInit();
-            this.pnl2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,8 +122,6 @@
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.ComboBox cmbBusqueda;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnl2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.ComboBox cmbTipos;
     }
