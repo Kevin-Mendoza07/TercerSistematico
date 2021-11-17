@@ -7,6 +7,6 @@ namespace AppCore.Interfaces
 {
     public interface ICalendarioService : IService<Calendario>
     {
-
+        int GetLastIdCuota();
     }
 }

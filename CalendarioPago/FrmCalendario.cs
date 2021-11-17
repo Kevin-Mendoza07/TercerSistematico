@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCore.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace CalendarioPago
 {
     public partial class FrmCalendario : Form
     {
-        public FrmCalendario()
+        public ICalendarioService calendarioService;
+        public FrmCalendario(ICalendarioService calendarioService)
         {
+            this.calendarioService = calendarioService;
             InitializeComponent();
         }
 

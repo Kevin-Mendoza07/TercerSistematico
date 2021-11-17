@@ -7,7 +7,6 @@ namespace AppCore.Interfaces
     public interface IService<T>
     {
         void Add(T t);
-        void Delete(T t);
         void Update(T t);
         List<T> GetAll();
     }
