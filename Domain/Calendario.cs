@@ -10,6 +10,9 @@ namespace Domain
         public Estado Estado { get; set; }
         public DateTime FechaVencimiento { get; set; }
         public DateTime FechaPaga { get; set; }
+        public decimal Monto { get; set; }
+        public int Terminos { get; set; }
+        public decimal Tasa { get; set; }
         public decimal Principal { get; set; }
         public decimal Interest { get; set; }
         public decimal Impuestos { get; set; }

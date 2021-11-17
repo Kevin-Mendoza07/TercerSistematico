@@ -6,7 +6,7 @@ namespace Domain.Interfaces
 {
     public interface IRepository<T>
     {
-        void Create();
+        void Add(Calendario cln);
         List<T> GetAll();
         int GetLastIdCuota();
     }

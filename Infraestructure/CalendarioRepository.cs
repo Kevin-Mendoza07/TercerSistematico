@@ -1,11 +1,12 @@
 ﻿using Domain;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Infraestructure
 {
-    public class CalendarioRepository
+    public class CalendarioRepository : ICalendarioRepository
     {
         private List<Calendario> calendario;
 

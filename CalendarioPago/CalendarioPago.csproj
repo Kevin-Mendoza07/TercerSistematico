@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAgregarCuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarCuota.Designer.cs">
+      <DependentUpon>FrmAgregarCuota.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAgregarCuota.resx">
+      <DependentUpon>FrmAgregarCuota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCalendario.resx">
       <DependentUpon>FrmCalendario.cs</DependentUpon>
     </EmbeddedResource>

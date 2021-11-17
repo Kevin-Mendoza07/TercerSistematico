@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace CalendarioPago
 {
-    public partial class FrmCalendario : Form
+    public partial class FrmAgregarCuota : Form
     {
-        public FrmCalendario()
+        public FrmAgregarCuota()
         {
             InitializeComponent();
         }
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FrmAgregarCuota_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnCrear_Click(object sender, EventArgs e)
+        private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            FrmAgregarCuota frmAgregarCuota = new FrmAgregarCuota();
+
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
